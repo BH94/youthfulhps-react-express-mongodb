@@ -1,30 +1,47 @@
+@font-face {
+  font-family: "Limelight";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Limelight-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "AnticSlab";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/AnticSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/Oswald-VariableFont_wght.ttf");
+}
+
 body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #24292e;
+
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-/* Highlight */
-pre {
-  padding: 10px;
-  white-space: pre-wrap;
-  background-color: #333333;
-  color: white;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-}
-
-.ql-editor {
-  min-height: 300px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .app {
@@ -32,58 +49,149 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 700px;
+  height: 100vh;
+  background: #fff;
 }
 
-.wrapper {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-}
-
-.contentsWrap {
-  position: relative;
-  max-width: 1200px;
-  margin: 0px auto 0px;
-  padding: 16px 16px 50px;
-  box-sizing: border-box;
-  min-height: 83vh;
-}
-
-.contentsWrapSpacer {
-  height: 68px;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .contentsWrapSpacer {
-    height: 50px;
-    display: block;
-  }
+input.error {
+  box-shadow: inset 6px 6px 12px #6f7a64,
+    inset -6px -6px 12px rgba(255, 0, 0, 0.2);
 }
 
 .input-feedback {
   color: red;
+  height: 5px;
+  margin-top: -12px;
 }
 
-/* =================================
-            Scroll-y 
-================================= */
-
-::-webkit-scrollbar {
-  width: 10px;
+html {
+  font-size: 62.5%;
+  --hero: calc(6rem + 1vw);
+  --hero-sub: calc(4rem + 1vw);
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(0.25rem + 1vw);
+  --para: calc(1rem + 1vw);
+  --button: calc(4rem + 1vw);
+  --big: calc(6rem + 1vw);
+  --special-color: #906272;
+  --background-color: #414141;
+  --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10 px;
+.hero-text {
+  font-size: var(--hero);
+  font-weight: bolder;
+  font-family: "PlayfairDisplay", sans-serif;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.589);
-  border-radius: 10px;
+.hero-sub-text {
+  font-size: var(--hero-sub);
+  font-family: "PlayfairDisplay", sans-serif;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(54, 56, 58);
+h1 {
+  font-family: "PlayfairDisplay", sans-serif;
+  font-size: var(--header1);
+}
+
+p {
+  font-family: "AnticSlab", sans-serif;
+  font-size: var(--para);
+}
+
+button {
+  font-size: var(--button);
+}
+
+li,
+label,
+a {
+  font-size: var(--text);
+}
+h2 {
+  font-size: var(--header2);
+  font-family: "PlayfairDisplay", sans-serif;
+}
+h3 {
+  font-size: var(--header3);
+  font-family: "PlayfairDisplay", sans-serif;
+}
+h4,
+h5 {
+  font-size: var(--header4);
+  font-family: "PlayfairDisplay", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.page-header {
+  margin-top: 7rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1rem;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-font {
+  font-family: "Limelight", sans-serif;
+}
+
+.header-font {
+  font-family: "PlayfairDisplay", sans-serif;
+}
+
+.button-font {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-header {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 536px) {
+  .hero-text {
+    font-size: 4.8rem;
+  }
+
+  .hero-sub-text {
+    font-size: 2.8rem;
+  }
+}
+
+/* small size screen */
+
+@media screen and (max-width: 346px) {
+  .hero-text {
+    font-size: 4rem;
+  }
+
+  .hero-sub-text {
+    font-size: 2rem;
+  }
+}
+
+/* etc */
+.site-badge-count-4 .ant-badge-count {
+  background-color: #fff;
+  color: #999;
 }
