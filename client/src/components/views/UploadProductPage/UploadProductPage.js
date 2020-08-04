@@ -122,7 +122,11 @@ const UploadProductPage = (props) => {
             }}
           >
             {categories.map((item) => (
-              <option key={item.key} value={item.value}>
+              <option
+                key={item.key}
+                value={item.value}
+                style={{ color: "black" }}
+              >
                 {item.value}
               </option>
             ))}

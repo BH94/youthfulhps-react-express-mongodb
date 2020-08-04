@@ -65,6 +65,7 @@ const LoginPage = (props) => {
                   response.payload.tokenExp
                 );
                 window.localStorage.setItem("userId", response.payload.userId);
+                window.location.reload();
                 props.history.push("/");
               } else {
                 setFormErrorMessage("Check out your Account or Password again");
