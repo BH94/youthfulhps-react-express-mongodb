@@ -83,12 +83,15 @@ html {
 }
 
 .hero-text {
+  color: white;
   font-size: var(--hero);
   font-weight: bolder;
   font-family: "PlayfairDisplay", sans-serif;
+  letter-spacing: 0.5rem;
 }
 
 .hero-sub-text {
+  color: white;
   font-size: var(--hero-sub);
   font-family: "PlayfairDisplay", sans-serif;
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 //word-break 고민중..
 const StyledCard = styled.a`
@@ -16,7 +16,7 @@ const StyledCard = styled.a`
   word-break: break-all;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -67,6 +67,16 @@ const StyledCard = styled.a`
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    &:before {
+      opacity: 1;
+    }
+    .info {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
 `;
 
